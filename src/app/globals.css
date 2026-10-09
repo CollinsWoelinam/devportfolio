@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Brand palette: black, orange, white and their variants. */
+@theme {
+  --color-ink-950: #050505;
+  --color-ink-900: #0c0c0c;
+  --color-ink-800: #161616;
+  --color-ink-700: #242424;
+  --color-ink-500: #6b6b6b;
+  --color-ink-300: #a8a8a8;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-snow: #ffffff;
+  --color-snow-muted: #ededed;
+
+  --color-ember-300: #ffb27a;
+  --color-ember-400: #ff8a33;
+  --color-ember-500: #ff6a00;
+  --color-ember-600: #e05500;
+  --color-ember-900: #2b1405;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(calc(-50% - 1.25rem));
+    }
   }
 }
 
+/* Brand grid pattern, used for the site background and the mobile menu. */
+@utility bg-grid {
+  --grid-line: color-mix(in srgb, var(--color-snow) 4%, transparent);
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Reveals the grid in soft patches that drift left and right down the page. */
+@utility grid-patches {
+  mask-image:
+    radial-gradient(ellipse 45% 22% at 78% 8%, black, transparent 70%),
+    radial-gradient(ellipse 40% 18% at 12% 45%, black, transparent 70%),
+    radial-gradient(ellipse 45% 20% at 88% 80%, black, transparent 70%);
+  mask-size: 100% 1800px;
+  mask-repeat: repeat-y;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink-950);
+  color: var(--color-snow-muted);
+}
+
+::selection {
+  background: var(--color-ember-500);
+  color: var(--color-ink-950);
 }
