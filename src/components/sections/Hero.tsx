@@ -2,6 +2,7 @@ import type { Profile } from "@/types/portfolio";
 import { Avatar } from "@/components/ui/Avatar";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { StatusBadge } from "@/components/ui/StatusBadge";
 
 export function Hero({ profile }: { profile: Profile }) {
   return (
@@ -13,13 +14,7 @@ export function Hero({ profile }: { profile: Profile }) {
 
       <Container className="relative grid items-center gap-7 sm:gap-14 lg:grid-cols-[1.25fr_1fr]">
         <div className="order-2 text-center lg:order-1 lg:text-left">
-          <p className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-900/60 px-4 py-1.5 text-xs text-ink-300 backdrop-blur">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ember-500 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-ember-500" />
-            </span>
-            {profile.location}
-          </p>
+          <StatusBadge>{profile.location}</StatusBadge>
 
           <h1 className="mt-5 sm:mt-6 text-[2.5rem] leading-[1.05] font-bold tracking-tight text-snow sm:text-6xl lg:text-7xl">
             <span className="block text-xl font-medium text-ink-300 sm:text-3xl">

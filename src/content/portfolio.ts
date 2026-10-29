@@ -108,12 +108,39 @@ export const portfolio: Portfolio = {
 
   projects: [
     {
+      title: "Radian",
+      description:
+        "A real-time fleet telemetry and smart dispatch platform featuring live GPS streaming, nearest-driver routing by road drive time, shift replays, and geofencing alerts.",
+      stack: ["Flutter", "Go", "TimescaleDB", "PostGIS", "Redis", "Next.js", "MapLibre"],
+      repoUrl: "https://github.com/CollinsWoelinam/Radian",
+    },
+    {
+      title: "Ledgr",
+      description:
+        "An offline-first mobile money expense tracker that automatically parses MTN MoMo and Telecel Cash SMS notifications into categorized transactions, budgets, and financial insights on-device.",
+      stack: ["React Native", "Expo", "TypeScript", "SQLCipher", "Android"],
+      repoUrl: "https://github.com/CollinsWoelinam/Ledgr",
+    },
+    {
+      title: "Florascan",
+      description:
+        "An AI-powered plant identification platform that recognises plant species from photos, providing care instructions, watering needs, and toxicity information for pets and children.",
+      stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "AI"],
+      liveUrl: "https://florascan2-0.vercel.app/",
+    },
+    {
+      title: "Faunadex",
+      description:
+        "An AI-driven animal identification app that recognizes wildlife and domestic species from photos, detailing species names, habitats, conservation status, and facts.",
+      stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "AI"],
+      liveUrl: "https://faunadex-nu.vercel.app/",
+    },
+    {
       title: "HealthAtlas",
       description:
         "A healthcare facility locator that helps users find hospitals, clinics, pharmacies, and healthcare services, using location and map features to identify facilities and navigate to them.",
       stack: ["Flutter", "Supabase", "Google Maps"],
       repoUrl: "https://github.com/CollinsWoelinam/HealthAtlas",
-      featured: true,
     },
     {
       title: "LIFE-MAC Africa Website Rebuild",
@@ -123,13 +150,6 @@ export const portfolio: Portfolio = {
       liveUrl: "https://lifemac.org",
     },
     {
-      title: "CCT Business Consult Website",
-      description:
-        "A business website translating an organisation's needs into a useful online presence.",
-      stack: [],
-      liveUrl: "https://www.cctbusinessconsult.com",
-    },
-    {
       title: "Torchbearers Books & Stationery Services",
       description:
         "Website for a Ghanaian bookshop and reading community, showcasing textbooks and stationery and inviting readers to join the community.",
@@ -137,11 +157,11 @@ export const portfolio: Portfolio = {
       liveUrl: "https://www.tbssgh.com",
     },
     {
-      title: "ATLAS-CLOP — 2D/3D Room Visualisation",
+      title: "CCT Business Consult Website",
       description:
-        "A collaborative project improving the room visualisation interface, including adjusting room tile dimensions and making the 2D room outline visible.",
-      stack: ["Vite", "Django"],
-      repoUrl: "https://github.com/eugene-sew/ATLAS-CLOP",
+        "A business website translating an organisation's needs into a useful online presence.",
+      stack: [],
+      liveUrl: "https://www.cctbusinessconsult.com",
     },
   ],
 
